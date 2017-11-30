@@ -1,3 +1,5 @@
+//--------------- INDEX 1 --------------- //
+
 //////// ADD /////////
 
 $(document).ready (function () {
@@ -130,3 +132,43 @@ $(document).ready (function () {
 });
 
 //////// DATAABOUTME /////////
+
+$(document).ready (function () {
+
+});
+
+
+//----------------------INDEX 2 ------------------//
+
+//////////// CHANGE ///////////
+
+$(document).ready (function () {
+    $('input').change(function () {
+        console.log($(this).val())
+    })
+});
+
+////////// SUBMIT ////////////
+
+$(document).ready (function () {
+    $('#form').on('submit', function (event) {
+       event.preventDefault();
+       console.log($('input').val());
+    });
+});
+
+///////// DUPLICATE VALUE ////////
+
+$(document).ready (function () {
+   $('#input2').val($('#input1').val());
+});
+
+///////// KEYS ////////////////
+
+$(document).ready (function () {
+    $('.field-text').keypress(function () {
+        var KeyPR = this.value;
+        console.log(KeyPR);
+    });
+});
+
