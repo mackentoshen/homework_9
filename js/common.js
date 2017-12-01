@@ -49,7 +49,7 @@ $(document).ready (function () {
 /////// TRIGGERALERT ///////
 
 $(document).ready (function () {
-    $('.triggler-btn').on('click', function () {
+    $('.trigger-btn').on('click', function () {
         $('.alert-btn').trigger("click");
     })
 });
@@ -58,7 +58,7 @@ $(document).ready (function () {
 
 $(document).ready (function () {
     $('.clone-btn').on('click', function () {
-        $(this).clone().text('cloned').after('.clone-btn')
+        $(this).after($(this).clone().text('cloned'));
     })
 });
 
@@ -74,14 +74,26 @@ $(document).ready (function () {
 //
 // })
 
+// (function () {
+//
+// })();
+
 /////// EACHBUTTON //////////
+
+// $(document).ready (function () {
+//     $('.eachBtnText').on('click', function () {
+//         console.log('click');
+//         var a = $('.button-container').find('.button-items button');
+//         jQuery.each(a, function( i, val ) {
+//             console.log(val);
+//         });
+//     })
+// });
 
 $(document).ready (function () {
     $('.eachBtnText').on('click', function () {
-        console.log('click');
-        var a = $('.button-container').find('.button-items button');
-        jQuery.each(a, function( i, val ) {
-            console.log(val);
+        $('button').each(function () {
+            console.log($(this).html());
         });
     })
 });
