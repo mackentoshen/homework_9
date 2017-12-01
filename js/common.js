@@ -146,7 +146,9 @@ $(document).ready (function () {
 //////// DATAABOUTME /////////
 
 $(document).ready (function () {
+    $('.data-about-me-btn').on('click', function (){
 
+    });
 });
 
 
@@ -164,15 +166,18 @@ $(document).ready (function () {
 
 $(document).ready (function () {
     $('#form').on('submit', function (event) {
+        console.log($(this).serialize());
        event.preventDefault();
-       console.log($('input').val());
     });
 });
 
 ///////// DUPLICATE VALUE ////////
 
 $(document).ready (function () {
-   $('#input2').val($('#input1').val());
+
+   $('#input2').keyup(function () {
+      $('#input1').val($(this).val());
+   });
 });
 
 ///////// KEYS ////////////////
@@ -182,5 +187,21 @@ $(document).ready (function () {
         var KeyPR = this.value;
         console.log(KeyPR);
     });
+});
+$(document).ready (function () {
+    $('.data-about-me-btn').on('click', function () {
+
+        console.log('Высота:' + $(this).height() + ',',
+            'Ширина:' + $(this).width() + ',',
+            'Абсолютная позиция по х:' + $(this).position().left + ',',
+            'Абсолютная позиция по y:' + $(this).position().top + ',',
+            'Значение атрибута:' + $(this).attr('class') + ',',
+            'Родительский элемент:' + $(this).parent().prop('tagName') + ',',
+            'Сосед сверху:' + $(this).prev().text() + ',',
+            'Сосед снизу:' + $(this).next().text() + ',',
+            'Текст кнопки:' + $(this).text() + '.'
+        )
+    });
+
 });
 
