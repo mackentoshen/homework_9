@@ -38,6 +38,27 @@
     display: none;
 }
 
+.input-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.field-text {
+    max-width: 300px;
+    margin-bottom: 15px;
+}
+
+.select-container {
+    margin-bottom: 15px;
+}
+
+.radiobtn-container {
+    margin-bottom: 15px;
+}
+
+.checkbox-btn {
+    margin-bottom: 15px;
+}
 
 .content-btn {
     background: #34d989;
@@ -52,7 +73,7 @@
     -webkit-box-shadow: 6px 6px 19px #666666;
     -moz-box-shadow: 6px 6px 19px #666666;
     box-shadow: 6px 6px 19px #666666;
-    font-family: Arial;
+    font-family: Arial, sans-serif;
     color: #ffffff;
     font-size: 20px;
     padding: 13px 26px 15px 25px;

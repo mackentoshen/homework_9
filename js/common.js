@@ -146,8 +146,18 @@ $(document).ready (function () {
 //////// DATAABOUTME /////////
 
 $(document).ready (function () {
-    $('.data-about-me-btn').on('click', function (){
+    $('.data-about-me-btn').on('click', function () {
 
+        console.log('Height:' + $(this).height() + ',',
+            'Width:' + $(this).width() + ',',
+            'Position ablosute X:' + $(this).position().left + ',',
+            'Position ablosute Y:' + $(this).position().top + ',',
+            'Attribute value:' + $(this).attr('class') + ',',
+            'Parent element:' + $(this).parent().prop('tagName') + ',',
+            'Neighbour top:' + $(this).prev().text() + ',',
+            'Neighbour bottom:' + $(this).next().text() + ',',
+            'Button text:' + $(this).text() + '.'
+        )
     });
 });
 
@@ -188,20 +198,7 @@ $(document).ready (function () {
         console.log(KeyPR);
     });
 });
-$(document).ready (function () {
-    $('.data-about-me-btn').on('click', function () {
 
-        console.log('Высота:' + $(this).height() + ',',
-            'Ширина:' + $(this).width() + ',',
-            'Абсолютная позиция по х:' + $(this).position().left + ',',
-            'Абсолютная позиция по y:' + $(this).position().top + ',',
-            'Значение атрибута:' + $(this).attr('class') + ',',
-            'Родительский элемент:' + $(this).parent().prop('tagName') + ',',
-            'Сосед сверху:' + $(this).prev().text() + ',',
-            'Сосед снизу:' + $(this).next().text() + ',',
-            'Текст кнопки:' + $(this).text() + '.'
-        )
-    });
 
-});
+
 
